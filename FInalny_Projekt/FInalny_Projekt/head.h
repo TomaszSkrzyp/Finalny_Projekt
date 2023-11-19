@@ -18,6 +18,6 @@ struct Point {///@brief struktura punktu
         return sum;
     }
 };
-void k_means(std::vector<Point>* Points, int powt, int ilosc_k, int ile_pkt, int d);
+std::vector<Point>k_means(std::vector<Point>* Points, int powt, int ilosc_k, int ile_pkt, int d);
 std::vector<Point> create_vec(std::string input_file);
 void wyjscie(std::vector<Point>* Points, int ilosc_k, int d, std::string output_file);

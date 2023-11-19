@@ -3,7 +3,7 @@
 #include<string>
 #include<fstream>
 #include"head.h"
-void k_means(std::vector<Point>*Points, int powt, int ilosc_k, int ile_pkt, int d ) {
+std::vector<Point> k_means(std::vector<Point>*Points, int powt, int ilosc_k, int ile_pkt, int d ) {
     ///(adres wektora punktow,ilosc powtorzen algorytmu,ilosc clustrow,ilosc punktow)
     std::vector<Point> Centroidy;///wektor przechowujacy centroidy clustrow
     std::vector<Point>::iterator it;
@@ -59,12 +59,7 @@ void k_means(std::vector<Point>*Points, int powt, int ilosc_k, int ile_pkt, int 
 
             }
         }
-        for (int i = 0; i < ilosc_k; i++) {///rob
-            for (int l = 0; l < d; l++) {
-                std::cout << Centroidy[i].coordinates[l] << " ";
-            }
-            std::cout << "\n";
-        }
+        
 
 
 
@@ -72,14 +67,15 @@ void k_means(std::vector<Point>*Points, int powt, int ilosc_k, int ile_pkt, int 
             //std::cout << "        " << ilosc_punktow_w_clustrze[numer_klustra] << "\n";
             for (int l = 0; l < d; l++) {
                 srednie_koordynatow[numer_klustra][l] = srednie_koordynatow[numer_klustra][l] / ilosc_punktow_w_clustrze[numer_klustra];///obliczanie sredniej wspolrzednych
-                std::cout << srednie_koordynatow[numer_klustra][l] << ", ";                                                           ///dla kazdego klustra->
+                                                                 ///dla kazdego klustra->
             }                                                                                                                           ///wyznaczenie nowych centroidow    
-            std::cout << "\n";
+            
             Centroidy[numer_klustra] = Point(srednie_koordynatow[numer_klustra]);
         }
 
 
     }
+    return Centroidy;
 
     
         
