@@ -69,7 +69,7 @@ int main(int argc, char* argv[]) {
     }
     
     create_data(pkt, d, input_file);
-
+    
     ///document entity
     /// i love doxygen
     std::vector<Point> Points;
@@ -88,5 +88,5 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
-///.\Finalny_Projekt_copy\FInalny_Projekt\x64\Debug\FInalny_Projekt.exe -i dataset.txt -o liczby.txt -k 3 -d 2 -pkt 300
+///.\x64\Debug\FInalny_Projekt.exe -i dataset.txt -o liczby.txt -k 3 -d 2 -pkt 300
 ///.\"nazwa sklonowanego repo"\FInalny_Projekt\x64\Debug\FInalny_Projekt.exe -i dataset.txt -o liczby.txt -k 3 -d 2 -pkt 30
