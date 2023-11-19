@@ -53,7 +53,7 @@ std::vector<Point> k_means(std::vector<Point>*Points, int powt, int ilosc_k, int
             int numer_wspolrzednej = 0;
             for (it_coord = podany_punkt.coordinates.begin(); it_coord != podany_punkt.coordinates.end(); ++it_coord) {
                 double wspolrzedna_podanego_punktu = *it_coord;
-                srednie_koordynatow[numer_clustra][numer_wspolrzednej] += wspolrzedna_podanego_punktu;
+                srednie_koordynatow[numer_clustra][numer_wspolrzednej] += wspolrzedna_podanego_punktu;///liczenie srednich koordynatow
                 numer_wspolrzednej += 1;
                 *it_coord = wspolrzedna_podanego_punktu;
 
@@ -61,15 +61,11 @@ std::vector<Point> k_means(std::vector<Point>*Points, int powt, int ilosc_k, int
         }
         
 
-
-
         for (int numer_klustra = 0; numer_klustra < ilosc_k; numer_klustra++) {
-            //std::cout << "        " << ilosc_punktow_w_clustrze[numer_klustra] << "\n";
             for (int l = 0; l < d; l++) {
                 srednie_koordynatow[numer_klustra][l] = srednie_koordynatow[numer_klustra][l] / ilosc_punktow_w_clustrze[numer_klustra];///obliczanie sredniej wspolrzednych
-                                                                 ///dla kazdego klustra->
+                                                                                                                                    ///dla kazdego klustra->
             }                                                                                                                           ///wyznaczenie nowych centroidow    
-            
             Centroidy[numer_klustra] = Point(srednie_koordynatow[numer_klustra]);
         }
 

@@ -17,7 +17,7 @@ int main(int argc, char* argv[]) {
         if (a == "-i") {
             input_file = argv[i + 1];
             
-            while (input_file.substr(input_file.length() - 4) != ".txt") {
+            while (input_file.substr(input_file.length() - 4) != ".txt") {///plik jest nieprawidlowy
                 std::cout << "podaj nazwe pliku numer " << i / 2 + 1 << " wraz z rozszerzeniem .txt"<<"\n";
                 std::cin >> input_file;
 
@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
         else if (a == "-o") {
             output_file = argv[i + 1];
 
-            while (output_file.substr(output_file.length() - 4) != ".txt") {
+            while (output_file.substr(output_file.length() - 4) != ".txt") {///plik jest nieprawidlowy
                 std::cout << "podaj nazwe pliku numer " << i / 2 + 1 << " wraz z rozszerzeniem .txt" << "\n";
                 std::cin >> output_file;
 
@@ -68,23 +68,22 @@ int main(int argc, char* argv[]) {
         }
     }
     
-    create_data(pkt, d, input_file);
+    create_data(pkt, d, input_file);///tworzenie danych
     
-    ///document entity
-    /// i love doxygen
+    
     std::vector<Point> Points;
-    Points = create_vec(input_file);
+    Points = create_vec(input_file);///stworzenie wektora punktow
 
     std::vector<Point> Centroidy=k_means(&Points, 100, k, pkt, d);
-    wyjscie(&Points, k, d, output_file);
-    std::vector<Point>::iterator it;
-    for (it=Centroidy.begin();it<Centroidy.end();it++){
+    wyjscie(&Points, k, d, output_file);///przekazanie
+    /*std::vector<Point>::iterator it;
+    for (it = Centroidy.begin(); it<Centroidy.end(); it++) {
         Point x = *it;
         for (int i = 0; i < d; i++) {
             std::cout << x.coordinates[i]<<" ";
         }
         std::cout << "\n";
-    }
+    }*/
 
     return 0;
 }
