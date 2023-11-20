@@ -134,7 +134,11 @@
     <ClCompile Include="wyjscie.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="create_data.h" />
+    <ClInclude Include="create_vec.h" />
     <ClInclude Include="head.h" />
+    <ClInclude Include="point.h" />
+    <ClInclude Include="wyjscie.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="dataset.txt" />

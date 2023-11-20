@@ -3,6 +3,7 @@
 #include<string>
 #include<fstream>
 #include"head.h"
+//#include"k_means.h"
 std::vector<Point> k_means(std::vector<Point>*Points, int powt, int ilosc_k, int ile_pkt, int d ) {
     ///(adres wektora punktow,ilosc powtorzen algorytmu,ilosc clustrow,ilosc punktow, ilosc wymiarow)
     std::vector<Point> Centroidy;///wektor przechowujacy centroidy clustrow

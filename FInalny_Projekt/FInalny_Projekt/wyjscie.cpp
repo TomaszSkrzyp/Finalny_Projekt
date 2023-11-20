@@ -1,6 +1,7 @@
 #include<fstream>
 #include<vector>
 #include"head.h"
+//#include"wyjscie.h"
 void wyjscie(std::vector<Point>* Points, int ilosc_k, int d, std::string output_file) {
 	std::ofstream strumien_wyjscia(output_file);
 	std::vector<std::vector<double>> podzial(ilosc_k);

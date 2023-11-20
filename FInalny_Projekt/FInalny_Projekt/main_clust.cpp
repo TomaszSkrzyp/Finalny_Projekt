@@ -6,7 +6,8 @@
 #include "head.h"
 
 int main(int argc, char* argv[]) {
-    if (argc < 5) {
+   
+    if (argc < 10) {
         std::cout << "za malo argumentow";
         return 1;
     }
@@ -14,7 +15,12 @@ int main(int argc, char* argv[]) {
 
     for (int i = 0; i < argc; ++i) {
         std::string a = argv[i];
+        if (i == argc - 1) {
+            std::cout << "blednie podany ostatni argument";
+            return 1;
+        }
         if (a == "-i") {
+            
             input_file = argv[i + 1];
             
             while (input_file.substr(input_file.length() - 4) != ".txt") {///plik jest nieprawidlowy
@@ -88,4 +94,4 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 ///.\x64\Debug\FInalny_Projekt.exe -i dataset.txt -o liczby.txt -k 3 -d 2 -pkt 300
-///.\"nazwa sklonowanego repo"\FInalny_Projekt\x64\Debug\FInalny_Projekt.exe -i dataset.txt -o liczby.txt -k 3 -d 2 -pkt 30
+///.\"nazwa sklonowanego repo"\FInalny_Projekt\x64\Debug\FInalny_Projekt.exe -i dataset.txt -o liczby.txt -k 5 -d 4 -pkt 300

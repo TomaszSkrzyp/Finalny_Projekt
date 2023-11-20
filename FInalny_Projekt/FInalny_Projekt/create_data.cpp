@@ -4,6 +4,7 @@
 #include<vector>
 #include<random>
 #include "head.h"
+//#include"create_data.h"
 void create_data(int ile_pkt, int d, std::string input_file) {
     std::ofstream dataset;
     dataset.open(input_file);
