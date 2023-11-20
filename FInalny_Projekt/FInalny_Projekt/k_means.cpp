@@ -4,7 +4,7 @@
 #include<fstream>
 #include"head.h"
 std::vector<Point> k_means(std::vector<Point>*Points, int powt, int ilosc_k, int ile_pkt, int d ) {
-    ///(adres wektora punktow,ilosc powtorzen algorytmu,ilosc clustrow,ilosc punktow)
+    ///(adres wektora punktow,ilosc powtorzen algorytmu,ilosc clustrow,ilosc punktow, ilosc wymiarow)
     std::vector<Point> Centroidy;///wektor przechowujacy centroidy clustrow
     std::vector<Point>::iterator it;
     std::vector<Point>::iterator p_it;
